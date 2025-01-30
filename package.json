@@ -1,0 +1,9 @@
+{
+  "name": "pp-helm-starter",
+  "devDependencies": {
+    "semantic-release-preconfigured-conventional-commits": "1.1.116"
+  },
+  "engines": {
+      "node": "22.12"
+  }
+}
