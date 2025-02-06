@@ -1,15 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "..fullname" . }}
+  name: {{ .Values.config.servicename }}
+  namespace: {{ .Release.Namespace }}
   labels:
-    {{- include "..labels" . | nindent 4 }}
+   {{- include "gateway-service.labels" . | nindent 4 }}
 spec:
-  type: {{ .Values.service.type }}
-  ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
   selector:
-    {{- include "..selectorLabels" . | nindent 4 }}
+    app: {{ .Values.config.servicename }}
+  ports:
+    - protocol: TCP
+      port: {{ .Values.config.outputPort }}
+      targetPort: {{ .Values.config.outputPort }}
+      name: http
+  type: ClusterIP

@@ -1,62 +1,29 @@
-{{/*
-Expand the name of the chart.
-*/}}
-{{- define "..name" -}}
-{{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
-{{- end }}
+{{- define "gateway-service.labels" -}}
+app: {{ .Values.config.servicename }}
+{{- end -}}
 
-{{/*
-Create a default fully qualified app name.
-We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
-If release name contains chart name it will be used as a full name.
-*/}}
-{{- define "..fullname" -}}
-{{- if .Values.fullnameOverride }}
-{{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
-{{- else }}
-{{- $name := default .Chart.Name .Values.nameOverride }}
-{{- if contains $name .Release.Name }}
-{{- .Release.Name | trunc 63 | trimSuffix "-" }}
-{{- else }}
-{{- printf "%s-%s" .Release.Name $name | trunc 63 | trimSuffix "-" }}
-{{- end }}
-{{- end }}
-{{- end }}
-
-{{/*
-Create chart name and version as used by the chart label.
-*/}}
-{{- define "..chart" -}}
-{{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
-{{- end }}
-
-{{/*
-Common labels
-*/}}
-{{- define "..labels" -}}
-helm.sh/chart: {{ include "..chart" . }}
-{{ include "..selectorLabels" . }}
-{{- if .Chart.AppVersion }}
-app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
-{{- end }}
-app.kubernetes.io/managed-by: {{ .Release.Service }}
-{{- end }}
-
-{{/*
-Selector labels
-*/}}
-{{- define "..selectorLabels" -}}
-app.kubernetes.io/name: {{ include "..name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
-{{- end }}
-
-{{/*
-Create the name of the service account to use
-*/}}
-{{- define "..serviceAccountName" -}}
-{{- if .Values.serviceAccount.create }}
-{{- default (include "..fullname" .) .Values.serviceAccount.name }}
-{{- else }}
-{{- default "default" .Values.serviceAccount.name }}
-{{- end }}
-{{- end }}
+{{- define "gateway-service.container" -}}
+- name: {{ .Values.config.servicename }}
+  image: "{{ .Values.config.image.repository }}:{{ .Values.config.image.tag }}"
+  ports:
+  - name: http
+    containerPort: {{ .Values.config.outputPort }}
+    protocol: TCP
+  env:
+    - name: LOCATION_SERVICE_HTTP_URL
+      value: {{ .Values.config.locationServiceHttpUrl | quote }}
+    - name: LOCATION_API_VERSION
+      value: {{ .Values.config.locationApiVersion | quote }}
+    - name: LOCATION_SERVICE_GRPC_URL
+      value: {{ .Values.config.locationServiceGrpcUrl | quote }}
+    - name: CHAT_SERVICE_HTTP_URL
+      value: {{ .Values.config.chatServiceHttpUrl | quote }}
+    - name: CHAT_API_VERSION
+      value: {{ .Values.config.chatApiVersion | quote }}
+    - name: CHAT_SERVICE_GRPC_URL
+      value: {{ .Values.config.chatServiceGrpcUrl | quote }}
+    - name: USER_SERVICE_URL
+      value: {{ .Values.config.userServiceGrpcUrl | quote }}
+    - name: NOTIFICATION_SERVICE_GRPC_URL
+      value: {{ .Values.config.notificationServiceGrpcUrl | quote }}
+{{- end -}}

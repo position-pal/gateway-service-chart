@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    {{- include "gateway-service.labels" . | nindent 4 }}
+  name: {{ .Values.config.servicename }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: {{ .Values.config.replicaNumber }}
+  selector:
+    matchLabels:
+      app: {{ .Values.config.servicename }}
+  template:
+    metadata:
+      labels:
+        {{- include "gateway-service.labels" . | nindent 8 }}
+    spec:
+      containers:
+        {{- include "gateway-service.container" . | nindent 8 }}

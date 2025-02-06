@@ -1,6 +1,6 @@
 apiVersion: v2
-name: positionpal-helm-template
-description: A Helm chart for Kubernetes
+name: position-pal-gateway-service
+description: Helm chart for the Position PAL Gateway Service
 
 # A chart can be either an 'application' or a 'library' chart.
 #
