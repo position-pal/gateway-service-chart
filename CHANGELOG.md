@@ -1,3 +1,9 @@
+## 1.0.0 (2025-02-06)
+
+### Features
+
+* add base files ([9e7c9bb](https://github.com/position-pal/gateway-service-chart/commit/9e7c9bbab3de128f164eb3420288ce592fdebf66))
+
 ## 1.0.0 (2025-01-30)
 
 ### Features
