@@ -1,3 +1,21 @@
+## [1.1.0](https://github.com/position-pal/gateway-service-chart/compare/1.0.0...1.1.0) (2025-02-15)
+
+### Dependency updates
+
+* **api-deps:** update positionpal/gateway docker tag to v2.5.1 ([#4](https://github.com/position-pal/gateway-service-chart/issues/4)) ([2e1660e](https://github.com/position-pal/gateway-service-chart/commit/2e1660e15b92d862c5874c559929f661c3814c61))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.123 ([#3](https://github.com/position-pal/gateway-service-chart/issues/3)) ([b3fc8ce](https://github.com/position-pal/gateway-service-chart/commit/b3fc8cebfc4d9d01cdbbb53bbef457d952b6fddf))
+
+### Build and continuous integration
+
+* **deps:** add renovate.json file ([cbc264c](https://github.com/position-pal/gateway-service-chart/commit/cbc264c41050471531602619df0ea50cef61af51))
+* **deps:** pin dependencies ([#2](https://github.com/position-pal/gateway-service-chart/issues/2)) ([75d7163](https://github.com/position-pal/gateway-service-chart/commit/75d7163d551ae1a242560405a42d552ce59183c9))
+* **deps:** update actions/setup-node action to v4.2.0 ([#6](https://github.com/position-pal/gateway-service-chart/issues/6)) ([47a9383](https://github.com/position-pal/gateway-service-chart/commit/47a93834fc6544d3237f2b9239ec4657460270e8))
+
+### Refactoring
+
+* edit service structure ([c510d7f](https://github.com/position-pal/gateway-service-chart/commit/c510d7f1658a72de7e64a592ea84748f94d071e4))
+* update name for service ([bd88844](https://github.com/position-pal/gateway-service-chart/commit/bd88844ac764d97588a1483eb8c8f24408bed5a5))
+
 ## 1.0.0 (2025-02-06)
 
 ### Features
