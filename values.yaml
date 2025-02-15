@@ -1,7 +1,7 @@
 config:
   image:
     repository: positionpal/gateway
-    tag: 2.0.1
+    tag: 2.0.1@sha256:a18e62c76fd3529a3601accebffadd47ba79a9602d29b1357b9de050a61157fe
     pullPolicy: IfNotPresent
 
   servicename: gateway-service
