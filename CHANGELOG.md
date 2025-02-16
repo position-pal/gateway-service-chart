@@ -1,3 +1,11 @@
+## [1.2.0](https://github.com/position-pal/gateway-service-chart/compare/1.1.0...1.2.0) (2025-02-16)
+
+### Dependency updates
+
+* **api-deps:** update positionpal/gateway docker tag to v2.5.2 ([#9](https://github.com/position-pal/gateway-service-chart/issues/9)) ([c952b48](https://github.com/position-pal/gateway-service-chart/commit/c952b4830c45b8311e7248328c86636ee162d60e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.124 ([#8](https://github.com/position-pal/gateway-service-chart/issues/8)) ([e03d285](https://github.com/position-pal/gateway-service-chart/commit/e03d285dca7fae9627319faf9e25e130613c3024))
+* **deps:** update node.js to 22.14 ([#5](https://github.com/position-pal/gateway-service-chart/issues/5)) ([47b0e40](https://github.com/position-pal/gateway-service-chart/commit/47b0e40011927822614390382a8cbf94a501f723))
+
 ## [1.1.0](https://github.com/position-pal/gateway-service-chart/compare/1.0.0...1.1.0) (2025-02-15)
 
 ### Dependency updates
