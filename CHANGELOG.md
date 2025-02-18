@@ -1,3 +1,13 @@
+## [1.6.0](https://github.com/position-pal/gateway-service-chart/compare/1.5.0...1.6.0) (2025-02-18)
+
+### Dependency updates
+
+* **api-deps:** update positionpal/gateway docker tag to v2.6.0 ([#14](https://github.com/position-pal/gateway-service-chart/issues/14)) ([5d48668](https://github.com/position-pal/gateway-service-chart/commit/5d48668f768597537611259c3b5b44e6f89556a7))
+
+### Build and continuous integration
+
+* **deps:** update azure/setup-helm action to v4.3.0 ([#13](https://github.com/position-pal/gateway-service-chart/issues/13)) ([fed2cab](https://github.com/position-pal/gateway-service-chart/commit/fed2cab73738369b874c7d7286b85c7f2f0dc7f3))
+
 ## [1.5.0](https://github.com/position-pal/gateway-service-chart/compare/1.4.0...1.5.0) (2025-02-17)
 
 ### Dependency updates
