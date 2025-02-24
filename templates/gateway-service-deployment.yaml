@@ -3,13 +3,13 @@ kind: Deployment
 metadata:
   labels:
     {{- include "gateway-service.labels" . | nindent 4 }}
-  name: {{ .Values.config.servicename }}
+  name: {{ .Values.serviceName }}
   namespace: {{ .Release.Namespace }}
 spec:
-  replicas: {{ .Values.config.replicaNumber }}
+  replicas: {{ .Values.replicaNumber }}
   selector:
     matchLabels:
-      app: {{ .Values.config.servicename }}
+      {{- include "gateway-service.labels" . | nindent 8 }}
   template:
     metadata:
       labels:

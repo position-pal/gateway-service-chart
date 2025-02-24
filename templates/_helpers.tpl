@@ -1,29 +1,29 @@
 {{- define "gateway-service.labels" -}}
-app: {{ .Values.config.servicename }}
+app: {{ .Values.serviceName}}
 {{- end -}}
 
 {{- define "gateway-service.container" -}}
-- name: {{ .Values.config.servicename }}
-  image: "{{ .Values.config.image.repository }}:{{ .Values.config.image.tag }}"
+- name: {{ .Values.serviceName}}
+  image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
   ports:
   - name: http
-    containerPort: {{ .Values.config.outputPort }}
+    containerPort: {{ .Values.outputPort }}
     protocol: TCP
   env:
     - name: LOCATION_SERVICE_HTTP_URL
-      value: {{ .Values.config.locationServiceHttpUrl | quote }}
+      value: {{ .Values.locationServiceHttpUrl | quote }}
     - name: LOCATION_API_VERSION
-      value: {{ .Values.config.locationApiVersion | quote }}
+      value: {{ .Values.locationApiVersion | quote }}
     - name: LOCATION_SERVICE_GRPC_URL
-      value: {{ .Values.config.locationServiceGrpcUrl | quote }}
+      value: {{ .Values.locationServiceGrpcUrl | quote }}
     - name: CHAT_SERVICE_HTTP_URL
-      value: {{ .Values.config.chatServiceHttpUrl | quote }}
+      value: {{ .Values.chatServiceHttpUrl | quote }}
     - name: CHAT_API_VERSION
-      value: {{ .Values.config.chatApiVersion | quote }}
-    - name: CHAT_SERVICE_GRPC_URL
-      value: {{ .Values.config.chatServiceGrpcUrl | quote }}
+      value: {{ .Values.chatApiVersion | quote }}
+    - name: CHAT_SERVICE_URL
+      value: {{ .Values.chatServiceGrpcUrl | quote }}
     - name: USER_SERVICE_URL
-      value: {{ .Values.config.userServiceGrpcUrl | quote }}
+      value: {{ .Values.userServiceGrpcUrl | quote }}
     - name: NOTIFICATION_SERVICE_GRPC_URL
-      value: {{ .Values.config.notificationServiceGrpcUrl | quote }}
+      value: {{ .Values.notificationServiceGrpcUrl | quote }}
 {{- end -}}

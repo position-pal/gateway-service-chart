@@ -1,19 +1,19 @@
-config:
-  image:
-    repository: positionpal/gateway
-    tag: 2.6.3@sha256:11a2a66fa03ae4d950a95168f2169b34d014350fbf54a03f25bda98717d158af
-    pullPolicy: IfNotPresent
 
-  servicename: gateway-service
-  replicaNumber: 1
+image:
+  repository: positionpal/gateway
+  tag: 2.6.3@sha256:11a2a66fa03ae4d950a95168f2169b34d014350fbf54a03f25bda98717d158af
+  pullPolicy: IfNotPresent
 
-  outputPort: 3000
+serviceName: gateway-service
+replicaNumber: 1
 
-  locationServiceHttpUrl: http://locservice:8080
-  locationApiVersion: v1
-  locationServiceGrpcUrl: locservice:5052
-  chatServiceHttpUrl: http://chatservice:8080
-  chatApiVersion: v1
-  chatServiceGrpcUrl: chatservice:5052
-  userServiceGrpcUrl: pp-us-user-service.user-service:5052
-  notificationServiceGrpcUrl: notificationservice:5052
+outputPort: 3000
+
+locationServiceHttpUrl: http://locservice:8080
+locationApiVersion: v1
+locationServiceGrpcUrl: locservice:5052
+chatServiceHttpUrl: http://chatservice:8080
+chatApiVersion: v1
+chatServiceGrpcUrl: chatservice:5052
+userServiceGrpcUrl: ""
+notificationServiceGrpcUrl: notificationservice:5052
