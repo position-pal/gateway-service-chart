@@ -1,3 +1,9 @@
+## [1.11.0](https://github.com/position-pal/gateway-service-chart/compare/1.10.0...1.11.0) (2025-02-26)
+
+### Dependency updates
+
+* **api-deps:** update positionpal/gateway docker tag to v2.8.1 ([#20](https://github.com/position-pal/gateway-service-chart/issues/20)) ([6979387](https://github.com/position-pal/gateway-service-chart/commit/69793879af5f6b7877504a774ee40b4cfb4c047c))
+
 ## [1.10.0](https://github.com/position-pal/gateway-service-chart/compare/1.9.0...1.10.0) (2025-02-24)
 
 ### Dependency updates
