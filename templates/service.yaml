@@ -11,6 +11,6 @@ spec:
       port: {{ .Values.outputPort }}
       targetPort: {{ .Values.outputPort }}
       name: http
-  type: ClusterIP
+  type: LoadBalancer
   selector:
   {{- include "gateway-service.labels" . | nindent  4}}

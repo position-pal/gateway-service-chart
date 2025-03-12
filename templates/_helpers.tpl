@@ -26,4 +26,6 @@ app: {{ .Values.serviceName}}
       value: {{ .Values.userServiceGrpcUrl | quote }}
     - name: NOTIFICATION_SERVICE_GRPC_URL
       value: {{ .Values.notificationServiceGrpcUrl | quote }}
+    - name: PORT
+      value: {{ .Values.outputPort | quote }}
 {{- end -}}

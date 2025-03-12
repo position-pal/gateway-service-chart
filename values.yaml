@@ -7,13 +7,13 @@ image:
 serviceName: gateway-service
 replicaNumber: 1
 
-outputPort: 3000
+outputPort: 80
 
-locationServiceHttpUrl: http://locservice:8080
+locationServiceHttpUrl: goodly-guppy.pp-ls:8080
 locationApiVersion: v1
-locationServiceGrpcUrl: locservice:5052
-chatServiceHttpUrl: http://chatservice:8080
+locationServiceGrpcUrl: goodly-guppy.pp-ls:5052
+chatServiceHttpUrl: goodly-guppy.pp-cs:8080
 chatApiVersion: v1
-chatServiceGrpcUrl: chatservice:5052
-userServiceGrpcUrl: ""
+chatServiceGrpcUrl: goodly-guppy.pp-cs:5052
+userServiceGrpcUrl: user-service.pp-us:5052
 notificationServiceGrpcUrl: notificationservice:5052
