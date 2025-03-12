@@ -1,3 +1,9 @@
+## [1.17.0](https://github.com/position-pal/gateway-service-chart/compare/1.16.0...1.17.0) (2025-03-12)
+
+### Features
+
+* change service typology to LoadBalancer ([fb62f0e](https://github.com/position-pal/gateway-service-chart/commit/fb62f0e80f365a3fd99646d017b37a1256a19d2b))
+
 ## [1.16.0](https://github.com/position-pal/gateway-service-chart/compare/1.15.0...1.16.0) (2025-03-06)
 
 ### Dependency updates
