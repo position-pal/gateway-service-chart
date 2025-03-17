@@ -1,3 +1,13 @@
+## [1.19.0](https://github.com/position-pal/gateway-service-chart/compare/1.18.0...1.19.0) (2025-03-17)
+
+### Dependency updates
+
+* **api-deps:** update positionpal/gateway docker tag to v3.1.1 ([#28](https://github.com/position-pal/gateway-service-chart/issues/28)) ([09e7c08](https://github.com/position-pal/gateway-service-chart/commit/09e7c08d5a707caf5a48a21dd37587addf71e782))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.3.0 ([#27](https://github.com/position-pal/gateway-service-chart/issues/27)) ([5b3844a](https://github.com/position-pal/gateway-service-chart/commit/5b3844adc1a3ad772ec6cdef015ba15643543a9a))
+
 ## [1.18.0](https://github.com/position-pal/gateway-service-chart/compare/1.17.0...1.18.0) (2025-03-12)
 
 ### Dependency updates
