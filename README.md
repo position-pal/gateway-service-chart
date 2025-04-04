@@ -1,32 +1,28 @@
 # Position Pal Helm Starter
 
-This repository contains a Helm starter chart for the PositionPal Project. It provides a template for creating Helm charts to deploy applications on Kubernetes.
+This is a Helm chart for deploying the Position Pal Gateway Service. The chart includes all necessary configurations and dependencies to run the service in a Kubernetes environment.
 
-## Features
+## Configure the Chart
+For a complete list of configuration options, please refer to the `values.yaml` file in the chart directory. Below are some common configurations you may want to customize:
 
-- Pre-configured templates for common Kubernetes resources such as Deployment, Service, Ingress, and more.
-- Configurable service account, image pull secrets, and resource limits.
-- Liveness and readiness probes.
-- Customizable Helm values.
+- `image.repository`: The Docker image repository for the gateway service.
+- `image.tag`: The Docker image tag for the gateway service.
+- `replicaNumber`: The number of replicas for the gateway service deployment.
 
-## Usage
+- `outputPort`: The port on which the service will be exposed.
 
-### Prerequisites
+- `locationServiceHttpUrl`: The HTTP URL for the location service.
+- `locationApiVersion`: The API version for the location service.
+- `locationServiceGrpcUrl`: The gRPC URL for the location service.
+- `chatServiceHttpUrl`: The HTTP URL for the chat service.
+- `chatApiVersion`: The API version for the chat service.
+- `chatServiceGrpcUrl`: The gRPC URL for the chat service.
+- `userServiceGrpcUrl`: The gRPC URL for the user service.
+- `notificationServiceGrpcUrl`: The gRPC URL for the notification service.
 
-- Helm 3.x installed on your local machine. You can follow the [Helm installation guide](https://helm.sh/docs/intro/install/) if you don't have it installed.
+## Install the Chart
+To install the chart with the release name `my-release`:
 
-### Using the Starter
-
-Use the [Salesforce Helm Starter Plugin](https://github.com/salesforce/helm-starter) for creating a new Helm chart using this starter.
-
-1. Fetch this repository:
-
-    ```sh
-    helm starter fetch https://github.com/position-pal/pp-helm-starter.git
-    ```
-
-2. Create a new chart using this starter:
-
-    ```sh
-    helm create <CHART_NAME> --starter pp-helm-starter
-    ```
+```bash
+helm install my-release . --namespace position-pal --create-namespace
+```
