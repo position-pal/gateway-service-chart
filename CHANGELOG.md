@@ -1,3 +1,14 @@
+## [1.20.1](https://github.com/position-pal/gateway-service-chart/compare/1.20.0...1.20.1) (2025-04-14)
+
+### Documentation
+
+* edit README ([dac7777](https://github.com/position-pal/gateway-service-chart/commit/dac7777ffc07fb5e9b30b31314f98f2d8f9a9050))
+
+### Build and continuous integration
+
+* adding if condition for release a new chart ([d90d407](https://github.com/position-pal/gateway-service-chart/commit/d90d407c9614694c0be5f695e17e05e39882be3d))
+* **deps:** update actions/setup-node action to v4.4.0 ([#30](https://github.com/position-pal/gateway-service-chart/issues/30)) ([b76ce7c](https://github.com/position-pal/gateway-service-chart/commit/b76ce7cd2ee6531078e4630bb49342d93bf70143))
+
 ## [1.20.0](https://github.com/position-pal/gateway-service-chart/compare/1.19.0...1.20.0) (2025-03-17)
 
 ### Dependency updates
